@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f4f6;
+}
+
+ul {
+  display: flex;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+li {
+  margin-left: -1px;
+}
+li:first-child a {
+  border-radius: 8px 0 0 8px;
+}
+
+li:last-child a {
+  border-radius: 0 8px 8px 0;
+  margin-top: -1px;
+  border: none;
+  height: calc(100% - 1px);
+}
+
+a {
+  background-color: #fff;
+  color: #6b7280;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 2px solid #d1d5db;
+  height: 2.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 0;
+  transform: skew(-30deg);
+  position: relative;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+a:hover,
+a:focus,
+a.active {
+  outline: 0;
+  color: #000000;
+  border-color: #000000;
+  z-index: 1;
+}
+
+.dark a:hover, .dark a:focus, .dark a.active {
+  border-color: #fff;
+  color: #fff;
+  outline: 0;
+  
+}
+a > * {
+  transform: skew(30deg);
+}
+a span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+a span svg {
+  margin-right: 0.4em;
+  width: 1em;
+  height: 1em;
+}
+
+li {
+  list-style: none;
+}
+.theme-toggle {
+  background-color: #fff; /* Apply white background when the class is present */
+  color: #333; /* Set the default text color to white */
+}
+
+.theme-toggle.white-background {
+  background-color: #333 !important; /* Set the default background color to black */
+  color: #fff; /* Apply black text color when the class is present */
+}
+
+.dark .nav-dark {
+  background-color: #333;
+}
